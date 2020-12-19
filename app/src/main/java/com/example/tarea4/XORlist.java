@@ -93,8 +93,28 @@ public class XORlist {
 
     /**
      * Metodo para transformar la lista en un array
-     * @return el movimiento a array
+     * @return el int a array
      */
+
+    public int[] getArray(){
+        int[] array;
+        if (this.head == null){
+            array = new int[1];
+            return array;
+        }
+        else{
+            array = new int[this.size];
+            Node tmp = this.head;
+            int i = 0;
+
+            while (tmp != null){
+                array[i] = tmp.getValor();
+                tmp = tmp.getNext();
+                i++;
+            }
+            return array;
+        }
+    }
 
     /**
      * Metodo para imprimir la lista
