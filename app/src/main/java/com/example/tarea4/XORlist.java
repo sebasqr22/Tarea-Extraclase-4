@@ -95,10 +95,12 @@ public class XORlist {
         if (!this.isEmpty()){
             if (this.head.getValor() == data){
                 this.head = this.head.getNext();
+                this.size--;
             }
             else if (this.tail.getValor() == data){
                 this.tail.getPrev().setNext(null);
                 this.tail = this.tail.getPrev();
+                this.size--;
             }
             else{
                 Node tmp = this.head.getNext();
@@ -107,6 +109,7 @@ public class XORlist {
                     if (tmp.getValor() == data){
                         tmp.getPrev().setNext(tmp.getNext());
                         tmp.getNext().setPrev(tmp.getPrev());
+                        this.size--;
                         break;
                     }
                     tmp = tmp.getNext();
