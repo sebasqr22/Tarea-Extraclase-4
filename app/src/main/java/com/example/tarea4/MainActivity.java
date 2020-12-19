@@ -54,19 +54,25 @@ public class MainActivity extends AppCompatActivity {
     public void DisplayList(){
 
         int[] array = lista.getArray();
-        TextView display = (TextView) findViewById(R.id.ListDisplay);
-        String XOR = "";
-        XOR = "<---|"+" "+array[0]+" "+"|<--";
-        for (int i = 1; i < array.length; i++){
-            if(i == array.length-1){
-                XOR += "->|"+" "+array[i]+" "+"|--->";
-            }
-            else{
-                XOR += "->|"+" "+array[i]+" "+"|<--";
-            }
 
+        if (array[0]== 0){
+            return;
         }
-        display.setText(XOR);
+        else {
+            TextView display = (TextView) findViewById(R.id.ListDisplay);
+            String XOR = "";
+            XOR = "<---|"+" "+array[0]+" "+"|<--";
+            for (int i = 1; i < array.length; i++){
+                if(i == array.length-1){
+                    XOR += "->|"+" "+array[i]+" "+"|--->";
+                }
+                else{
+                    XOR += "->|"+" "+array[i]+" "+"|<--";
+                }
+
+            }
+            display.setText(XOR);
+        }
     }
 
 
