@@ -9,8 +9,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
+        android:layout_marginStart="524dp"
+        android:layout_marginLeft="524dp"
         android:text="Created by David De la Hoz and Sebastián Quesada"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -37,28 +37,27 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="244dp"
-        android:layout_height="68dp"
+        android:layout_width="213dp"
+        android:layout_height="48dp"
         android:text="XOR LINKED LIST"
-        android:textSize="30sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.57"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.021" />
+        app:layout_constraintVertical_bias="0.02" />
 
     <Button
         android:id="@+id/InsertButton"
-        android:layout_width="152dp"
-        android:layout_height="53dp"
+        android:layout_width="88dp"
+        android:layout_height="52dp"
         android:onClick="AddToList"
-        android:text="Insert to the list"
+        android:text="Insert "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.834"
+        app:layout_constraintHorizontal_bias="0.235"
         app:layout_constraintStart_toStartOf="@+id/editTextNumber"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.133" />
+        app:layout_constraintVertical_bias="0.134" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
