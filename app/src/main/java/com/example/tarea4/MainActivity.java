@@ -14,11 +14,7 @@ import android.graphics.Canvas;
 
 
 public class MainActivity extends AppCompatActivity {
-
     public XORlist lista = new XORlist();
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         lista.insertLast(num);
 
         DisplayList();
+
+        textnumber.setText("");
     }
 
     public void RemovefromList(View view){ // add a number to the AA Tree
@@ -49,17 +47,19 @@ public class MainActivity extends AppCompatActivity {
         lista.delete(num);
 
         DisplayList();
+
+        textnumber.setText("");
     }
 
     public void DisplayList(){
+        TextView display = (TextView) findViewById(R.id.ListDisplay);
 
         int[] array = lista.getArray();
 
         if (array[0]== 0){
-            return;
+            display.setText("");
         }
         else {
-            TextView display = (TextView) findViewById(R.id.ListDisplay);
             String XOR = "";
             XOR = "<---|"+" "+array[0]+" "+"|<--";
             for (int i = 1; i < array.length; i++){
