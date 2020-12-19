@@ -5,8 +5,8 @@ public class Node {
 
 
     private int valor;
-    private Node next;
-    private Node prev;
+    private Node next = null;
+    private Node prev = null;
 
     public Node(int valor) {
         this.valor = valor;

@@ -71,22 +71,46 @@ public class XORlist {
      * @param data
      * @return posicion del elemento
      */
-    public Node find(int data){
+    public boolean find(int data){
         if (this.isEmpty()){
-            return null;
+            return false;
         }else{
             if (this.head.getValor() == data){
-                return this.head;
+                return true;
             }else{
                 Node tmp = this.head.getNext();
 
                 while(tmp!=null){
                     if (tmp.getValor()==data){
-                        return tmp;
+                        return true;
                     }
                     tmp = tmp.getNext();
                 }
-                return null;
+                return false;
+            }
+        }
+    }
+
+    public void delete(int data){
+        if (!this.isEmpty()){
+            if (this.head.getValor() == data){
+                this.head = this.head.getNext();
+            }
+            else if (this.tail.getValor() == data){
+                this.tail.getPrev().setNext(null);
+                this.tail = this.tail.getPrev();
+            }
+            else{
+                Node tmp = this.head.getNext();
+
+                while (tmp != null){
+                    if (tmp.getValor() == data){
+                        tmp.getPrev().setNext(tmp.getNext());
+                        tmp.getNext().setPrev(tmp.getPrev());
+                        break;
+                    }
+                    tmp = tmp.getNext();
+                }
             }
         }
     }

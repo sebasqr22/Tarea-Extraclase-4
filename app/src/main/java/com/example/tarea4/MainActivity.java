@@ -15,7 +15,7 @@ import android.graphics.Canvas;
 
 public class MainActivity extends AppCompatActivity {
 
-    public XORlist list = new XORlist();
+    public XORlist lista = new XORlist();
 
 
 
@@ -34,9 +34,26 @@ public class MainActivity extends AppCompatActivity {
 
         int num = Integer.parseInt(textnumber.getText().toString());
 
-        list.insertLast(num);
+        lista.insertLast(num);
 
-        int[] array = list.getArray();
+        DisplayList();
+    }
+
+    public void RemovefromList(View view){ // add a number to the AA Tree
+        Toast.makeText(this, "The number will be added to tree", Toast.LENGTH_SHORT).show();
+
+        TextView textnumber = (TextView) findViewById(R.id.editTextNumber2);
+
+        int num = Integer.parseInt(textnumber.getText().toString());
+
+        lista.delete(num);
+
+        DisplayList();
+    }
+
+    public void DisplayList(){
+
+        int[] array = lista.getArray();
         TextView display = (TextView) findViewById(R.id.ListDisplay);
         String XOR = "";
         XOR = "<---|"+" "+array[0]+" "+"|<--";
