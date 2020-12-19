@@ -14,11 +14,7 @@ import android.graphics.Canvas;
 
 
 public class MainActivity extends AppCompatActivity {
-
     public XORlist lista = new XORlist();
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,14 +52,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void DisplayList(){
+        TextView display = (TextView) findViewById(R.id.ListDisplay);
 
         int[] array = lista.getArray();
 
         if (array[0]== 0){
-            return;
+            display.setText("");
         }
         else {
-            TextView display = (TextView) findViewById(R.id.ListDisplay);
             String XOR = "";
             XOR = "<---|"+" "+array[0]+" "+"|<--";
             for (int i = 1; i < array.length; i++){
