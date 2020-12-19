@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         lista.insertLast(num);
 
         DisplayList();
+
+        textnumber.setText("");
     }
 
     public void RemovefromList(View view){ // add a number to the AA Tree
@@ -49,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
         lista.delete(num);
 
         DisplayList();
+
+        textnumber.setText("");
     }
 
     public void DisplayList(){
